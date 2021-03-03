@@ -56,7 +56,7 @@ app.post("/repositories/:id/like", (request, response) => {
   const {id} = request.params;
 
   const findRepo = repositories.findIndex(item => item.id === id);
-
+  
   if(findRepo === -1){
     return response.status(400).json({error:'Repositório não encontrado'});
   }
